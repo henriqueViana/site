@@ -1,0 +1,113 @@
+.init-content{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;	
+}
+
+.first-container , 
+.container-photo{
+  height: 100%;
+}
+
+.bg-home{
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}		
+	
+.bg-home img{
+  width: 100%;
+  height: auto;
+}
+			
+.home-message{
+  color: #fff;
+  width: 100%;
+  top: 50%;
+}
+
+.home-message .messages{
+  animation: fadeText 30s ease-in-out infinite;
+  position: absolute;
+  opacity: 0;
+  text-align: center;
+  width: 70%;
+  top: 10%;
+}
+
+.home-message .messages	.title{
+  font-size: 3rem;
+  background-color: #76a6df;
+  opacity: .9;
+  padding: 10px;
+  text-align: left;
+  width: auto;
+  display: inline-block;
+  margin: 0;
+}
+
+.home-message .messages	.description{
+  font-style: italic;
+  background-color: rgba(0,0,0,.9);
+  text-align: left;
+  padding: 20px;
+  margin-top: 0;
+  display: inline-block;
+
+}
+
+.home-message	.message-2{
+	animation-delay: 10s;
+}
+
+.home-message	.message-3{
+	animation-delay: 20s;
+}
+
+@keyframes fadeText{
+	0%{
+		opacity: 0;
+	}
+	25%{
+		opacity: 1;
+	}
+	33% , 100%{
+		opacity: 0;
+	}
+}
+
+@media(max-width: 640px){
+
+  .home-message .messages{
+    text-align: center;
+    width: calc(100% - 40px);
+  }				
+
+  .home-message .messages	.title{
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .home-message .messages	.description{
+    width: calc(100% - 40px);
+    margin-left: 0;
+  }
+}
+
+@media(max-width: 580px){
+	.bg-home img{
+    height: 100%;
+  }
+}
+
+@media (max-width: 400px){
+
+  .init-content{
+		height: 400px;
+	}
+  
+  .title-services{
+    text-align: center;
+  }
+}

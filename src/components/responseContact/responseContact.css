@@ -1,0 +1,24 @@
+.response-contact{
+    padding: 10px 20px;
+    background-color: #059030;
+    border: 2px solid #053135;
+    color: #fff;
+    font-weight: bold;
+    position: fixed;
+    right: 20px;
+    top: 80px;
+    z-index: 1111000;
+    opacity: 0;
+    animation: showHide 3s ease;
+    
+}
+
+@keyframes showHide{
+    30%, 70%{
+        opacity: 1
+    }
+    100%{
+        opacity: 0;
+        z-index: -1;
+    }
+}

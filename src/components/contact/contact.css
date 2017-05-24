@@ -1,0 +1,125 @@
+.contact-component{
+	background-color: #343f4c;
+	color: #fff;
+}
+
+.form-contact{
+	padding: 40px 80px;
+	max-width: 1240px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.form-contact .title{
+  font-style: italic;
+}
+
+.form-contact .box-name , 
+.form-contact .box-email{
+  margin-top: 40px;
+}
+
+.form-contact .boxes{
+  width: calc(50% - 10px);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.form-contact .boxes .label{
+  margin-bottom: 5px;
+}
+
+.form-contact .boxes input{
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #586a81;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  color: #fff;  
+  text-shadow: 0px 0px 0px #95a3b7; /* change [input font] by this*/
+  -webkit-text-fill-color: transparent; /* deixa o cursor caret transparent */
+  transition: border-bottom .2s ease-in-out;
+}
+
+.form-contact .boxes input:focus{
+  outline: none;
+  border-bottom: 1px solid #fff;
+}
+
+.form-contact .boxes input:required {
+  box-shadow:none;
+}
+                
+.form-contact .boxes span{
+  color: #fc6c03;
+}
+
+.form-contact .box-name , 
+.form-contact .box-subject{
+  margin-right: 20px;
+}
+
+.form-contact .box-message{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.form-contact .box-message span{
+  color: #fc6c03;
+}
+
+.form-contact .box-message .label{
+  margin-bottom: 10px;
+}
+
+.form-contact .box-message .message-form{
+  width: inherit;
+  box-sizing: border-box;
+  height: 200px;
+  padding: 5px;
+  border: none;
+  background-color: #586a81;
+  color: #fff;
+  transition: background-color .2s ease-in-out , color .2s ease-in-out; 
+}
+
+.form-contact .box-message .message-form:focus{
+  background-color: #fff;
+  color: #000;
+}
+
+.form-contact .box-message .message-form:required {
+  box-shadow:none;
+}
+
+.form-contact .submit{
+  cursor: pointer;
+  padding: 10px 20px;
+  width: 250px;
+  margin-left: calc(50% - 125px);
+  border: 2px solid transparent;
+  background-color: #216970;
+  color: #fff;
+  transition: background-color .2s ease-in-out , border .2s ease-in-out; 
+  font-weight: bold;
+}
+
+.form-contact .submit:hover{
+  background-color: transparent;
+  border: 2px solid #216970;
+}
+
+
+@media(max-width : 780px){
+	.form-contact .boxes{
+		width: 100%;
+		display: block;
+	}
+}
+
+@media(max-width : 640px){
+	.form-contact{
+		padding: 40px 40px;
+	}
+}

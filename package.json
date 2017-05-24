@@ -1,0 +1,26 @@
+{
+  "name": "site",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "history": "^4.6.1",
+    "react": "^15.5.3",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.3",
+    "react-router": "^2.8.1",
+    "react-router-dom": "^4.1.1",
+    "react-slick": "^0.14.11",
+    "reset-css": "^2.2.0",
+    "scrollreveal": "^3.3.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

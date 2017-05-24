@@ -1,0 +1,153 @@
+.full-card{
+	width: 100%;
+	background-color:#fff;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.full-card .title{
+  margin-top: 0 !important;
+  margin-bottom: 40px;
+}
+
+.container-content{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+
+.full-card:nth-child(odd) .container-content{
+  display: flex;
+  flex-direction: row;
+}
+
+.full-card-content{
+  width: 50%;
+  min-height: 600px;
+  height: auto;
+  display: inline-block;
+  vertical-align: top;
+  padding: 60px;
+  box-sizing: border-box;
+  text-align: justify;
+  position: relative;
+}
+
+.full-card-content .button-project{
+  padding: 10px 15px;
+  width: 135px;
+  text-align: center;
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  background-color: #216970;
+  border: 2px solid #216970;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out , color .3s ease-in-out;
+}
+
+.full-card-content .button-project:hover{
+  background-color: #fff;
+  color: #216970;
+}
+
+.full-card-content-image{
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  min-height: 600px;
+  position: relative;
+  background-color: #111;
+}
+		
+.full-card-content-image .container-logo{
+  width: 100%;
+  margin-top: 40px;
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+
+.full-card-content-image .container-logo .logo{
+  width: 80px;
+  fill: currentColor;
+}
+
+.full-card-content-image .image-card{
+  width: 80%;
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+}
+
+.full-card-content-image.web-sites{
+  background-color: #00605b;
+}
+
+.full-card-content-image.wordpress{
+  background-color: #16003a;
+}
+
+.full-card-content-image.front-end{
+  background-color: #411500;
+}
+
+.full-card-content-image.mobileapp{
+  background-color: #003a37;
+}
+
+.full-card-content-image.img-bottom	.image-card{
+  bottom: 0;			
+}
+
+@media(max-width: 920px){
+	
+    .full-card-content{
+      display: block;
+      width: 100%;
+    }
+
+    .container-content ,
+    .full-card:nth-child(odd) .container-content{
+      flex-direction: column-reverse;
+    }
+
+
+    .full-card-content-image{
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      padding-top: 40px;
+    }
+                
+    .full-card-content-image .image-card{
+      width: 70%;
+      position: absolute;
+      bottom: 20px;
+      left: 15%;
+    }
+
+    .full-card-content .button-project{
+		  width: calc(100% - 83px);
+		  left: 40px;
+	  }
+			
+}
+
+@media(max-width: 480px){
+
+    .full-card-content{
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 120px;
+    }
+
+    
+
+    .full-card-content-image{
+      min-height: 450px;
+    }
+
+}

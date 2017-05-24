@@ -1,0 +1,116 @@
+.burger{
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  top: 15px;
+  right: 80px;
+  cursor: pointer;
+  z-index: 10;
+  display: none;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+}
+
+/* Burger Close */
+.element-burger{
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 50%;
+  background: #000;
+  opacity: 1;
+      
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.element-burger:nth-child(even){
+  left: 50%;
+  border-radius: 0 9px 9px 0;
+}
+
+
+.element-burger:nth-child(odd){
+  left: 0px;
+  border-radius: 9px 0 0 9px;
+}
+
+.element-burger:nth-child(1) , 
+.element-burger:nth-child(2){
+  top: 0px;
+} 
+
+.element-burger:nth-child(3) , 
+.element-burger:nth-child(4){
+  top: 12px;
+} 
+
+.element-burger:nth-child(5) , 
+.element-burger:nth-child(6){
+  top: 24px;
+} 
+
+
+/* Burger Open */
+
+.burger.open .element-burger{
+  background: #fff;
+}
+       
+.burger.open .element-burger:nth-child(1) ,
+.burger.open .element-burger:nth-child(6){
+  transform: rotate(45deg);
+} 
+
+.burger.open .element-burger:nth-child(2) ,
+.burger.open .element-burger:nth-child(5){
+  transform: rotate(-45deg);
+} 
+
+.burger.open .element-burger:nth-child(1){
+  left: 5px;
+  top: 5px;
+}
+
+.burger.open .element-burger:nth-child(2){
+  left: calc(50% - 5px);
+  top: 5px;
+}
+
+.burger.open .element-burger:nth-child(3){
+  left: -50%;
+  opacity: 0;
+}
+
+.burger.open .element-burger:nth-child(4){
+  left: 100%;
+  opacity: 0;
+}
+
+.burger.open .element-burger:nth-child(5){
+  left: 5px;
+  top: 17px;
+}
+
+.burger.open .element-burger:nth-child(6){
+  left: calc(50% - 5px);
+  top: 17px;
+}
+      
+.burger.open ~ .content{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+@media(max-width: 900px){
+  .burger{
+    display: block;
+  }
+}
+
+@media(max-width: 640px){
+  .burger{
+    right: 20px;
+  }
+}

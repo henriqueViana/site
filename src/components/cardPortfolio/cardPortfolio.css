@@ -1,0 +1,91 @@
+.link-portfolio.hide{
+  pointer-events: none;
+  cursor: none !important;
+  opacity: 0;
+  
+}
+.card-portfolio-component{
+  width: 320px;
+  height: 220px;
+  background-color: #e7e7e7;
+  cursor: pointer;
+  position: relative;
+  background-size: 100% 100%;
+  margin-bottom: 20px;
+}
+
+.card-portfolio-component .bg-image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.card-portfolio-component .label{
+  color: #fff;
+  border: 5px solid #fff;
+  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  min-width: 160px;
+  text-align: center;
+}
+
+.card-portfolio-component .card-portfolio-info{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  color: transparent;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .4s ease-in-out, color .2s ease-in-out, padding-top .2s ease-in-out;
+}
+
+.card-portfolio-component .card-portfolio-info:hover , 
+.card-portfolio-component .card-portfolio-info:active {
+  opacity: .9;
+  color: #fff;
+  padding-top: 50px;
+}
+
+.card-portfolio-component .card-portfolio-info .name{
+  margin-bottom: 30px;
+  padding-bottom: 5px;
+  width: 70%;
+  margin-left: 15%;
+  border-bottom: 1px solid #333;
+  font-weight: bold; 
+}
+
+.card-portfolio-component .card-portfolio-info .type{
+  font-style: italic;
+}
+
+.card-portfolio-component .card-portfolio-info .go-portfolio{
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.link-portfolio{
+  text-decoration: none;
+}
+
+
+
+@media(max-width: 820px){
+  .link-portfolio{
+    margin-left: calc(50% - 160px);
+    margin-bottom: 20px;
+  }
+
+  .link-portfolio.hide{
+    display: none;
+  }
+}

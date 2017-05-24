@@ -1,0 +1,13 @@
+.portfolio{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+}
+
+.title-portfolio{
+	border-top: 1px solid #ccc;
+	margin-top: 60px;
+	padding-top: 20px;
+  margin-bottom: 40px;
+}

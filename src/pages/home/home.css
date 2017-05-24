@@ -1,0 +1,78 @@
+/*Animation*/
+
+.init-cover{
+  width: 100%;
+  height: 100% ;
+  background: #fff;
+  animation: init 1s ease;
+  z-index: -1;
+  opacity: 0;
+  position: fixed !important;
+}
+
+@keyframes init{
+  0%{
+    opacity: 1;
+    z-index: 10000;
+  }
+
+  80%{
+    opacity: 1;
+  }
+ 
+  100%{
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.bar{
+  width: 0;
+  height: 3px;
+  background: #216970;
+  animation: bar 1s ease;
+}
+
+@keyframes bar{
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 125px;
+  }
+}
+
+/*-------------*/
+
+.page .box-title{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+  position: relative;
+}
+
+.page .box-title.portfolio{
+  margin-top: 0;
+}
+
+.page .sub-title{
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  padding: 5px 30px;
+  z-index: 2;
+}
+
+.page .line-title{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #216970;
+  z-index: 1;
+}
+
+.page .box-title.portfolio .line-title{
+  top: 30%;
+}
+
+
