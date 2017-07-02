@@ -17,7 +17,15 @@ class Landing extends Component{
 
 				<div className="page">
 					<h1 className="title">Landing Page</h1>
-					<h3>Sua estratégia de Marketing Digital precisa de uma Landing Page</h3>
+					<h3 className='subtitle'>Transforme os seus visitantes em leads e aumente as suas vendas.</h3>
+				</div>
+
+				<div className="content">
+					<div className="description page">
+						<p>
+							As Landing Pages são páginas únicas que divulgam seu produto ou serviço anunciado-os de forma clara e eficiente, são essenciais para gerar novos leads para o seu negócio. A partir delas é possível coletar imformações relevantes dos visitantes e os transformando em oportunidades de negócio.
+						</p>
+					</div>
 				</div>
 			</section>
 		)

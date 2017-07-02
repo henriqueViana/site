@@ -13,7 +13,7 @@ export default class About extends Component{
 			<section className="page-services about">
 				
 				<div className="page">
-					<h1>Sobre</h1>
+					<h1 className='title'>Sobre</h1>
 				</div>
 
 				<div className="content">

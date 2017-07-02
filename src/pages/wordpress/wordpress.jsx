@@ -21,7 +21,7 @@ class Wordpress extends React.Component{
 					<h3 className="subtitle">
 						De pequenos blogs pessoais à grandes portais e sistemas web. 
 						<br/>
-						com o Wordpress é possível.
+						Com o Wordpress é possível.
 					</h3>
 				</div>
 

@@ -1,5 +1,9 @@
 import React from 'react';
-import AjaxMail from '../ajaxMail/ajaxMail';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+
+import ResponseContact from '../responseContact/responseContact';
+
 
 import './contact.css';
 
@@ -8,41 +12,35 @@ class Contact extends React.Component{
 	constructor(props){
 		super(props);
 
-		this.state = {
-			'name' : null , 
-			'email' : null , 
-			'subject' : null , 
-			'phone' : null , 
-			'message' : null
-		}
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}	
-
-	resetState() {
-		this.setState({
-			...this.state ,
-			name : null , 
-			email : null , 
-			subject : null , 
-			phone : null , 
-			message : null
-		});
-	}
 
 	handleSubmit(event){
 
 		event.preventDefault();
 
-		this.setState(
-			{	
-				...this.state,
+		let form = document.querySelector('.form-contact');
+
+		let payload = { 
 				name : document.querySelector('.name-form').value ,
 				email : document.querySelector('.email-form').value ,
 				subject : document.querySelector('.subject-form').value ,
 				phone : document.querySelector('.phone-form').value ,
 				message : document.querySelector('.message-form').value
-			}
-		);
+		}
+
+		let data = new FormData();
+
+		data.append('dataUser' , JSON.stringify(payload));
+
+		axios.post('/email.php', data)
+			.then(res => {
+				form.reset();
+				toast(<ResponseContact className='success' title='Mensagem enviada com sucesso!' content='Obrigado! Retornarei o seu contato em breve'/>);
+				return false;
+			})
+			.catch(err => toast(<ResponseContact className='error' title='Erro!' content='Erro ao enviar os dados, tente novamente'/>));
+		
 	}
 
 	render(){
@@ -82,8 +80,6 @@ class Contact extends React.Component{
 					<input type="submit" value="Enviar mensagem" className="submit"/>
 					
 				</form>
-
-				{(this.state.email) ? <AjaxMail name={this.state.name} email={this.state.email} subject={this.state.subject} phone={this.state.phone} message={this.state.message} /> : ''}
 				
 			</section>
 		)

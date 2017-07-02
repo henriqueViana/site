@@ -14,6 +14,7 @@ export default class Header extends Component {
     this.state = {toggle: ''}
 
     this.stateToggleMenu = this.stateToggleMenu.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
   }
 
   stateToggleMenu() {
@@ -42,11 +43,11 @@ export default class Header extends Component {
 
         <nav className='navigation' onClick={this.closeMenu}>
           <ul className='list-navigation'>
-            <Link to='/' onClick={this.closeMenu}><li>Home</li></Link>
-            <NavLink to='/sobre' activeClassName='active' ><li>Sobre</li></NavLink>
-            <NavLink to='/portfolio' activeClassName='active'><li>Portfólio</li></NavLink>
-            <NavLink to='/servicos' activeClassName='active'><li>Serviços</li></NavLink>
-            <NavLink to='/contato' activeClassName='active'><li>Contato</li></NavLink>
+            <Link to='/' className={this.props.match ? 'active' : ''} onClick={() => this.closeMenu()}><li>Home</li></Link>
+            <NavLink to='/sobre' className={this.props.match ? 'active' : ''} onClick={() => this.closeMenu()}><li>Sobre</li></NavLink>
+            <NavLink to='/portfolio' className={this.props.match ? 'active' : ''} onClick={() => this.closeMenu()}><li>Portfólio</li></NavLink>
+            <NavLink to='/servicos' className={this.props.match ? 'active' : ''} onClick={() => this.closeMenu()}><li>Serviços</li></NavLink>
+            <NavLink to='/contato' className={this.props.match ? 'active' : ''} onClick={() => this.closeMenu()}><li>Contato</li></NavLink>
             {/*<Link to='/blog' onClick={this.closeMenu}><li>blog</li></Link>*/}
           </ul>
         </nav>

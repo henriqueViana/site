@@ -26,6 +26,7 @@ export default props => (
       <p><i className="fa fa-mobile" aria-hidden="true"></i>55 21 99088-4419</p>
       <p><i className="fa fa-whatsapp" aria-hidden="true"></i>55 24 99983-0673 / Whatsapp</p>
       <p><i className="fa fa-envelope" aria-hidden="true"></i>contato@henriqueviana.com.br</p>
+      <p><i className="fa fa-skype" aria-hidden="true"></i>henriquehvisa</p>
     </div>
   
   </footer>

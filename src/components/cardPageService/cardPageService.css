@@ -3,6 +3,9 @@
 	background-color:#fff;
 	margin-top: 20px;
 	margin-bottom: 20px;
+  border: 1px solid #ccc;
+  height: 400px;
+  display: flex;
 }
 
 .full-card .title{
@@ -23,7 +26,7 @@
 
 .full-card-content{
   width: 50%;
-  min-height: 600px;
+  min-height: 400px;
   height: auto;
   display: inline-block;
   vertical-align: top;
@@ -31,6 +34,11 @@
   box-sizing: border-box;
   text-align: justify;
   position: relative;
+}
+.full-card-content .title{
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 30px;
 }
 
 .full-card-content .button-project{
@@ -55,57 +63,22 @@
 
 .full-card-content-image{
   width: 50%;
-  display: inline-block;
-  vertical-align: top;
-  min-height: 600px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 400px;
   position: relative;
-  background-color: #111;
-}
-		
-.full-card-content-image .container-logo{
-  width: 100%;
-  margin-top: 40px;
-  text-align: center;
-  position: relative;
-  color: #fff;
-}
-
-.full-card-content-image .container-logo .logo{
-  width: 80px;
-  fill: currentColor;
-}
-
-.full-card-content-image .image-card{
-  width: 80%;
-  position: absolute;
-  bottom: 20px;
-  left: 10%;
-}
-
-.full-card-content-image.web-sites{
-  background-color: #00605b;
-}
-
-.full-card-content-image.wordpress{
-  background-color: #16003a;
-}
-
-.full-card-content-image.front-end{
-  background-color: #411500;
-}
-
-.full-card-content-image.mobileapp{
-  background-color: #003a37;
-}
-
-.full-card-content-image.img-bottom	.image-card{
-  bottom: 0;			
+  overflow: hidden;
 }
 
 @media(max-width: 920px){
+
+    .full-card{
+      flex-direction: column;
+      height: 600px;
+    }
 	
     .full-card-content{
-      display: block;
       width: 100%;
     }
 
@@ -114,12 +87,14 @@
       flex-direction: column-reverse;
     }
 
-
     .full-card-content-image{
-      display: block;
       width: 100%;
       margin-left: 0;
-      padding-top: 40px;
+      height: 250px;
+    }
+
+    .full-card-content-image .bg{
+      width: 100%;
     }
                 
     .full-card-content-image .image-card{
@@ -138,16 +113,16 @@
 
 @media(max-width: 480px){
 
-    .full-card-content{
-      padding-left: 40px;
-      padding-right: 40px;
-      padding-bottom: 120px;
+    .full-card{
+      height: 550px;
     }
 
-    
+    .full-card-content{
+      padding: 20px 40px 40px 40px;
+    }
 
     .full-card-content-image{
-      min-height: 450px;
+      height: 150px;
     }
 
 }

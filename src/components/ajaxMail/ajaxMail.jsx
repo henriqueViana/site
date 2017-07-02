@@ -1,15 +1,14 @@
 import React from 'react';
-import Modal from '../../lib/modal';
-import ResponseContact from '../responseContact/responseContact';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
+import ResponseContact from '../responseContact/responseContact';
 
 class AjaxMail extends React.Component{
 
 	constructor(props){
 		super(props);
 		this.sendContact;
-
-		//this.modal = new Modal();
 	}
 
 	sendContact(){
@@ -25,28 +24,23 @@ class AjaxMail extends React.Component{
 		}
 
 		let data = new FormData();
+
 		data.append('dataUser' , JSON.stringify(payload));
 
-		fetch('/email.php' , {
-			method : 'POST' ,
-			body : data
-		})
-		.then((response) => response.json())
-		.then((data) => {
-			if(data){
+		axios.post('/email.php', data)
+			.then(res => {
 				form.reset();
-			 // this.modal.open('init-test');
+				toast(<ResponseContact className='success' title='Mensagem enviada com sucesso!' content='Obrigado! Retornarei o seu contato em breve'/>);
 				return false;
-			}
-		})
-		.catch((error) => console.log(error));
+			})
+			.catch(err => toast(<ResponseContact className='error' title='Erro!' content='Erro ao enviar os dados, tente novamente'/>));
 	}
 
 	render(){
 		this.sendContact();
 		
 		return(
-			<div><ResponseContact /></div>
+			<div></div>
 		)
 	}
 }

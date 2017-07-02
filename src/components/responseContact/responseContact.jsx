@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import './responseContact.css';
+import './responseContact.css'
 
-class ResponseContact extends Component{
-    render() {
-        return(
-            <div className='response-contact'>
-                Mensagem enviada com sucesso!
-            </div>
-        )
-    }
-}
-export default ResponseContact;
+export default props => (
+  <div className={props.className}>
+    <h3>{props.title}</h3>
+    <div>{props.content}</div>
+  </div>
+)
+

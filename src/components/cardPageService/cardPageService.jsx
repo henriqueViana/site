@@ -13,12 +13,8 @@ export default props => (
         <Link to={props.page} className="button-project">Saiba mais</Link>
       </div>
 
-      <div className={`full-card-content-image ${props.bgColor}`}>
-        <div className="container-logo">
-          <img className="logo" src={props.logo} alt={`Logo ${props.nameCard}`}/>
-          <h2>{props.nameCard}</h2>
-        </div>
-        <img className="image-card" src={props.image} alt={`Imagem ${props.nameCard}`}/>
+      <div className='full-card-content-image'>
+        <img className="bg" src={props.logo} alt={`Logo ${props.nameCard}`}/>
       </div>
 
     </article>

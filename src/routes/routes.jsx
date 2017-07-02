@@ -1,7 +1,8 @@
 import React from 'react';
 
-import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+import {HashRouter, Route, Link, Switch} from 'react-router-dom';
 import { createBrowserHistory } from 'history';
+import { ToastContainer } from 'react-toastify';
 
 import Header from '../template/header/header';
 import Footer from '../template/footer/footer';
@@ -23,8 +24,10 @@ import AcquaclassApp from '../pages/acquaclassApp/acquaclassApp';
 import Eventsys from '../pages/eventsys/eventsys';
 import Impa from '../pages/impa/impa';
 
+import '../../node_modules/react-toastify/dist/ReactToastify.min.css'; 
+
 export default props => (
-  <Router history={createBrowserHistory}>
+  <HashRouter>
     <Switch>
     <div className="wrapper">
       <Header />
@@ -45,7 +48,8 @@ export default props => (
       <Modal />
       <Contact />
       <Footer />
+      <ToastContainer />
     </div>
     </Switch>
-  </Router>
+  </HashRouter>
 )
