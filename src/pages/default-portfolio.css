@@ -22,7 +22,7 @@
 }
 
 .inner-portfolio .description{
-	width: calc(55% - 15px);
+	width: 100%;
 	display: inline-block;
 	vertical-align: top;
 	padding-right: 10px;

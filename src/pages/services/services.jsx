@@ -28,6 +28,7 @@ class Services extends React.Component{
 					nameCard={dataCardPageServices().site.name} 
 					logo={dataCardPageServices().site.logo} 
 					page={dataCardPageServices().site.url}
+					index='1'
 				/>
 
         <CardPageService 
@@ -36,6 +37,7 @@ class Services extends React.Component{
 					nameCard={dataCardPageServices().wordpress.name} 
 					logo={dataCardPageServices().wordpress.logo} 
 					page={dataCardPageServices().wordpress.url}
+					index='2'
 				/>
 
         <CardPageService 
@@ -44,6 +46,7 @@ class Services extends React.Component{
 					nameCard={dataCardPageServices().front.name} 
 					logo={dataCardPageServices().front.logo} 
 					page={dataCardPageServices().front.url}
+					index='3'
 				/>
 
 				<CardPageService 
@@ -52,6 +55,7 @@ class Services extends React.Component{
 					nameCard={dataCardPageServices().landing.name} 
 					logo={dataCardPageServices().landing.logo} 
 					page={dataCardPageServices().landing.url}
+					index='4'
 				/>
 
 			</div>

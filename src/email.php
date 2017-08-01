@@ -15,6 +15,7 @@ $headers .= "Bcc: " . $to;
 
 $message = ($post['phone']) ? "Telefone: " . $post['phone'] : '';
 $message .= "\r\n" . $post['message'];
+$message .= "<div style='color: red'>Texto vermelhão</div>";
 
 $send_email = mail($to, $subject , $message , $headers , "-f$to");
 

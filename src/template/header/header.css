@@ -5,6 +5,7 @@
   position: fixed;
   padding-left: 80px;
   padding-right: 80px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   z-index: 8;
@@ -104,6 +105,5 @@
   .header{
     padding-left: 20px;
     padding-right: 20px;
-
   }
 }

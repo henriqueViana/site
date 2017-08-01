@@ -1,8 +1,9 @@
 import React from 'react';
 
-import {HashRouter, Route, Link, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Link, Switch} from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import { ToastContainer } from 'react-toastify';
+import axios from 'axios';
 
 import Header from '../template/header/header';
 import Footer from '../template/footer/footer';
@@ -27,7 +28,7 @@ import Impa from '../pages/impa/impa';
 import '../../node_modules/react-toastify/dist/ReactToastify.min.css'; 
 
 export default props => (
-  <HashRouter>
+  <BrowserRouter>
     <Switch>
     <div className="wrapper">
       <Header />
@@ -51,5 +52,5 @@ export default props => (
       <ToastContainer />
     </div>
     </Switch>
-  </HashRouter>
+  </BrowserRouter>
 )

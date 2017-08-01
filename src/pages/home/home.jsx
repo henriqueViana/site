@@ -22,8 +22,8 @@ class Home extends Component{
     const config = {
       origin: 'bottom',
       duration: 700,
-      delay: 200,
-      distance: '100px',
+      delay: 100,
+      distance: '50px',
       scale: 1,
       easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
     }

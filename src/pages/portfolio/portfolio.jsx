@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './portfolio.css';
 
+import PortfolioBox from '../../components/portfolio/portfolio';
+
 export default class Portfolio extends Component {
   
   componentDidMount() {
@@ -13,7 +15,7 @@ export default class Portfolio extends Component {
      <section className="page-services">
 				<div className="page">
 					<h1 className="title">Portfólio</h1>
-					<h3 className="subtitle">Veja aqui alguns dos meus últimos trabalhos</h3>
+					<PortfolioBox />
 				</div>
 			</section>
     )
