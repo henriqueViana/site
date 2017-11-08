@@ -71,7 +71,6 @@ class Contact extends React.Component{
 					<div className="box-phone boxes">
 						<div className="label">Telefone</div>
 						<InputMask {...this.props} mask="(99) 99999-9999" maskChar=" " type='tel' className="phone-form" id="phone"/>
-						{/*<input type="tel" className="phone-form" id="phone" maxLength="15" placeholder="(99) 99999-9999"/>*/}
 					</div>
 
 					<div className="box-message">
